@@ -1,0 +1,14 @@
+@import "../assets/theme/theme_variables";
+
+.action-container {
+  border: 10px solid map-get($palette-color, secondary);
+  background: map-get($palette-color, secondary) !important;
+  color: map-get($palette-color, main);
+  padding: 40px;
+  max-height: -webkit-fill-available;
+}
+
+.text-container {
+  border: 10px dashed map-get($palette-color, complementary);
+  max-height: -webkit-fill-available;
+}

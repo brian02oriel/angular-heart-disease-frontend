@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+@import "./assets/theme/theme_variables";
+
+
+body, html, .main, .grid {
+  font-family: 'Inter Regular';
+  background-color: map-get($palette-color, main);
+  height: 100%;
+}
+
+h1 {
+  font-size: $h1;
+  margin: unset;
+}
+
+h2 {
+  font-size: $h2;
+  margin: unset;
+}
+
+label {
+  font-size: $label;
+}
+
+div {
+  border-radius: $radius;
+}
+

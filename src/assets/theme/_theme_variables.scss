@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Inter Regular";
+  src: url('../fonts/Inter-Regular.ttf') format('truetype');
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+@font-face {
+  font-family: "Inter SemiBold";
+  src: url('../fonts/Inter-SemiBold.ttf') format('truetype');
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url('../fonts/Inter-Bold.ttf') format('truetype');
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+@font-face {
+  font-family: "Inter Medium";
+  src: url('../fonts/Inter-Medium.ttf') format('truetype');
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+
+
+
+$palette-color: (
+  main: #FBF9FA,
+  secondary: #FD0054,
+  complementary: #A80038,
+  contrast: #2B2024
+);
+
+
+
+$radius: 15px;
+$h1: 64px;
+$h2: 48px;
+$label: 24px;
+$small-text: 20px;
+
+
