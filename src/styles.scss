@@ -21,6 +21,10 @@ h2 {
   margin: unset;
 }
 
+small {
+  font-size: $small-text;
+}
+
 label {
   font-size: $label;
 }

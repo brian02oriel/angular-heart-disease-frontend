@@ -8,6 +8,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-heart-disease-frontend": {
+      "i18n": {
+        "sourceLocale": "es-PR",
+        "locales": {
+          "en-US": "src/locale/messages.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,6 +27,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": ["es-PR"],
             "outputPath": "dist/angular-heart-disease-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",

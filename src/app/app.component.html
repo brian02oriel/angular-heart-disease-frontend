@@ -1,17 +1,45 @@
 <main class="main">
   <div class="grid">
     <div class="col-6 p-6">
-      <div class="action-container flex align-items-center justify-content-center h-full">
+      <div class="action-container flex flex-column align-items-center justify-content-center h-full">
         <div class="flex align-items-left justify-content-left h-full">
-          <h1>
+          <h1 i18n>
             Diagnóstico de enfermedades cardiacas
           </h1>
+        </div>
+        <div class="action flex align-items-center justify-content-center h-full w-full">
+          <div class="action-button p-3 flex align-content-center justify-content-center flex-column">
+            <div class="flex align-items-center justify-content-center">
+              <img src = "../assets/icons/heart-icon.svg" alt="Heart SVG"/>
+            </div>
+            <div class="flex align-items-center justify-content-center">
+              <h2 i18n> Diagnosticar </h2>
+            </div>
+          </div>
+        </div>
+        <div class="privacy-terms flex align-items-center justify-content-end w-full">
+          <small i18n> Aviso de privacidad </small>
         </div>
       </div>
     </div>
     <div class="col-6 p-6">
-      <div class="text-container flex align-items-center justify-content-center h-full">
-        2
+      <div class="text-container flex align-items-start justify-content-start h-full flex-column">
+        <h2 i18n>Descripción de los campos</h2>
+        <ul>
+          <li i18n><strong>Edad: </strong> edad del paciente.</li>
+          <li i18n><strong>Sexo: </strong> sexo del paciente. </li>
+          <li i18n><strong>Tipo de dolor de pecho:</strong> tipo de dolor de pecho. </li>
+          <li i18n><strong>Presión arterial en reposo:</strong> presión arterial del paciente estando en reposo.</li>
+          <li i18n><strong>Colesterol total en sangre:</strong> cantidad de colesterol en sangre del paciente (colesterol sérico). </li>
+          <li i18n><strong>Nivel de glucosa en ayunas:</strong> indica si el nivel de glucosa del paciente en ayunas es mayor de 120 mg-dl. </li>
+          <li i18n><strong>Electrocardiográficos:</strong> resultados electrocardiográficos en reposo. </li>
+          <li i18n><strong>Frecuencia cardíaca máxima:</strong> frecuencia cardiaca máxima alcanzada por el paciente. </li>
+          <li i18n><strong>Angina inducida por ejercicio:</strong> dolor o molestia en el pecho que ocurre cuando el músculo cardíaco no recibe suficiente sangre rica en oxígeno durante la actividad física. </li>
+          <li i18n><strong>Oldpeak:</strong> medida de la depresión del segmento ST inducida por el ejercicio en relación con el reposo.</li>
+          <li i18n><strong>Segmento ST:</strong> el segmento ST es una parte del electrocardiograma (ECG) que representa el intervalo entre el final de la despolarización ventricular y el comienzo de la repolarización ventricular.</li>
+          <li i18n><strong>Vasos principales:</strong> número de vasos mayores coloreados por una fluoroscopia. </li>
+          <li i18n><strong>Talasemia: </strong> tipo de talasemia que padece el paciente.</li>
+        </ul>
       </div>
     </div>
   </div>

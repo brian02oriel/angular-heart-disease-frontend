@@ -6,9 +6,48 @@
   color: map-get($palette-color, main);
   padding: 40px;
   max-height: -webkit-fill-available;
+  .action-button {
+    border: 10px solid map-get($palette-color, complementary);
+    background: map-get($palette-color, main) !important;
+    color: map-get($palette-color , complementary) !important;
+  }
+  .action-button:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+  }
+
+  .action {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .privacy-terms > small {
+    color: map-get($palette-color , main) !important;
+    text-decoration: underline;
+  }
+
+  .privacy-terms > small:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+  }
 }
 
 .text-container {
+  h2 {
+    color: map-get($palette-color, complementary);
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      strong {
+        text-decoration: underline;
+      }
+      font-size: 1.35em;
+      margin-bottom: 0.15em;
+    }
+  }
   border: 10px dashed map-get($palette-color, complementary);
   max-height: -webkit-fill-available;
+  padding: 40px;
 }
