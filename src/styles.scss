@@ -29,7 +29,7 @@ label {
   font-size: $label;
 }
 
-div {
+div.action-container, div.action-button, div.text-container {
   border-radius: $radius;
 }
 
