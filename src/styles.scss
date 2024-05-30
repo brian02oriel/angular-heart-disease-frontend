@@ -33,3 +33,30 @@ div.action-container, div.action-button, div.text-container {
   border-radius: $radius;
 }
 
+.p-component-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition-duration: 0.2s;
+}
+
+.p-dialog {
+  border-radius: $radius;
+  background-color: map-get($palette-color, main);
+  height: 90%;
+  width: 35% !important;
+  .p-dialog-header {
+    height: 35px;
+    .p-dialog-header-icons {
+      padding-right: 15px;
+      padding-top: 15px;
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+  }
+  .p-dialog-content {
+    padding: 40px;
+    max-height: none !important;
+  }
+}
+

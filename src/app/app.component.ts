@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     if (this.privacyTermsRef) {
       this.privacyTermsRef.close();
-  }
+    }
   }
 
   openPrivacyTerms(){
