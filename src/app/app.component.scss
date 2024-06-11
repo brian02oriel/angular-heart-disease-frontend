@@ -32,6 +32,9 @@
 }
 
 .text-container {
+  border: 10px dashed map-get($palette-color, complementary);
+  max-height: -webkit-fill-available;
+  padding: 40px;
   h2 {
     color: map-get($palette-color, complementary);
   }
@@ -43,11 +46,14 @@
       strong {
         text-decoration: underline;
       }
-      font-size: 1.35em;
-      margin-bottom: 0.15em;
+      font-size: 1.25em;
     }
   }
-  border: 10px dashed map-get($palette-color, complementary);
-  max-height: -webkit-fill-available;
-  padding: 40px;
+
+  small {
+    a {
+      color: map-get($palette-color, complementary) !important;
+    }
+  }
+
 }

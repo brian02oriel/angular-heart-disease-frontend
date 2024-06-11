@@ -37,7 +37,10 @@ $palette-color: (
   main: #FBF9FA,
   secondary: #FD0054,
   complementary: #A80038,
-  contrast: #2B2024
+  hover: #6b0024,
+  focus-active: #ffa7c4,
+  contrast: #2B2024,
+  input: #D9D9D9
 );
 
 
@@ -45,7 +48,10 @@ $palette-color: (
 $radius: 15px;
 $h1: 64px;
 $h2: 48px;
-$label: 24px;
+$label: 1.25em;
 $small-text: 20px;
 
+// Inputs
+$input-height: 40px;
+$input-font-size: 18px;
 

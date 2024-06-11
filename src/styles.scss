@@ -4,11 +4,14 @@
 @import "primeicons/primeicons.css";
 @import "./assets/theme/theme_variables";
 
+html {
+  display: flex;
+}
 
-body, html, .main, .grid {
+body, html, .main {
   font-family: 'Inter Regular';
   background-color: map-get($palette-color, main);
-  height: 100%;
+
 }
 
 h1 {
@@ -29,6 +32,11 @@ label {
   font-size: $label;
 }
 
+.field label {
+  font-weight: bold;
+  color: map-get($palette-color, complementary);
+}
+
 div.action-container, div.action-button, div.text-container {
   border-radius: $radius;
 }
@@ -41,10 +49,15 @@ div.action-container, div.action-button, div.text-container {
 .p-dialog {
   border-radius: $radius;
   background-color: map-get($palette-color, main);
-  height: 90%;
+  height: 100%;
+  @media screen and (max-width: 768px) {
+    width: 90% !important;
+  }
   width: 35% !important;
   .p-dialog-header {
     height: 35px;
+    padding: 0px;
+    border-radius: $radius;
     .p-dialog-header-icons {
       padding-right: 15px;
       padding-top: 15px;
@@ -57,6 +70,69 @@ div.action-container, div.action-button, div.text-container {
   .p-dialog-content {
     padding: 40px;
     max-height: none !important;
+    border-radius: $radius;
   }
 }
 
+.p-inputwrapper {
+  display: inline-flex;
+  flex-grow: 1;
+}
+
+.p-inputnumber {
+  width: -webkit-fill-available;
+  .p-inputtext {
+    border-radius: $radius 0px 0px $radius;
+  }
+}
+
+.p-dropdown {
+  border-radius: $radius;
+}
+
+
+.p-inputnumber-buttons-stacked .p-button.p-inputnumber-button-up {
+  border-top-right-radius: $radius;
+  border-color: map-get($palette-color, complementary);
+  background-color: map-get($palette-color, complementary);
+}
+.p-button.p-inputnumber-button-up:hover {
+  background-color: map-get($palette-color, hover);
+}
+
+.p-inputnumber-buttons-stacked .p-button.p-inputnumber-button-down {
+  border-bottom-right-radius: $radius;
+  border-color: map-get($palette-color, complementary);
+  background-color: map-get($palette-color, complementary);
+}
+
+.p-button.p-inputnumber-button-down:hover {
+  background-color: map-get($palette-color, hover);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 25%;
+  border-radius: $radius;
+  font-size: $label;
+  background-color: map-get($palette-color, complementary);
+  border-color: map-get($palette-color, complementary);
+  }
+
+.submit-button:hover, .submit-button:disabled {
+  background-color: map-get($palette-color, hover);
+  border-color: map-get($palette-color, hover);
+}
+
+.submit-button:focus-visible{
+  box-shadow: 0 0 0 0.2rem map-get($palette-color, focus-active);
+}
