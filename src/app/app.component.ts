@@ -46,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
       width: '50%',
       contentStyle: {"max-height": "500px", "overflow": "auto"},
       baseZIndex: 10000
-    }).onClose
+    })
   }
 
   openForm(){
@@ -54,6 +54,10 @@ export class AppComponent implements OnInit, OnDestroy {
       width: '50%',
       contentStyle: {"max-height": "500px", "overflow": "auto"},
       baseZIndex: 10000
-    }).onClose
+    }).onClose.subscribe((data) => {
+      if(data){
+        console.log(data)
+      }
+    })
   }
 }

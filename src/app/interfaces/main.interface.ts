@@ -1,19 +1,19 @@
 import {  FormControl } from "@angular/forms"
 
 export interface Dataset {
-  age: number
-  sex: Sex
-  chestPainType: ChestPainType
-  restingBloodPressure: number
-  serumCholestoral: number
-  fastingBloodSugar: HavePresence
-  restingElectrocardiographicResults: RestingElectrocardiographicResults
-  maxHeartRate: number
-  exerciseInducedAngina: HavePresence
-  oldpeak: number
-  STSegment: number
-  majorVessels: number
-  thal: Thal
+  age?: number
+  sex?: Sex
+  chestPainType?: ChestPainType
+  restingBloodPressure?: number
+  serumCholestoral?: number
+  fastingBloodSugar?: HavePresence
+  restingElectrocardiographicResults?: RestingElectrocardiographicResults
+  maxHeartRate?: number
+  exerciseInducedAngina?: HavePresence
+  oldpeak?: number
+  STSegment?: number
+  majorVessels?: number
+  thal?: Thal
 }
 
 export interface FormFields {
@@ -38,7 +38,7 @@ export interface Select {
 }
 
 export interface Sex extends Select {
-  value: 0 | 1
+  value: 0 | 1 // male = 1, female = 0
 }
 
 export interface ChestPainType extends Select {
@@ -54,5 +54,5 @@ export interface RestingElectrocardiographicResults extends Select {
 }
 
 export interface Thal extends Select {
-  value: 3 | 6 | 7
+  value: 3 | 6 | 7 // normal = 3, fixed defect = 6, reversable defect = 7
 }

@@ -1,61 +1,145 @@
-<div class="grid">
-  <div class="col-12">
-    <form [formGroup]="form">
-      <div class="field">
-        <label for="age">Edad</label>
-        <p-inputNumber inputId="age" formControlName="age" showButtons="true" required="true"/>
-      </div>
-      <div class="field">
-        <label for="sex">Sexo</label>
-        <p-dropdown id="sex" formControlName="sex" [options]="sexOptions" optionLabel="text" placeholder="Seleccione"  required="true"/>
-      </div>
-      <div class="field">
-        <label for="chestPainType">Tipo de dolor de pecho</label>
-        <p-dropdown id="chestPainType" formControlName="chestPainType" [options]="chestPainTypeOptions" optionLabel="text" placeholder="Seleccione"  required="true"/>
-      </div>
-      <div class="field">
-        <label for="restingBloodPressure">Presión arterial en reposo</label>
-        <p-inputNumber inputId="restingBloodPressure" formControlName="restingBloodPressure" showButtons="true" required="true"/>
-      </div>
-      <div class="field">
-        <label for="serumCholestoral">Colesterol total en sangre</label>
-        <p-inputNumber inputId="serumCholestoral" formControlName="serumCholestoral" showButtons="true" required="true"/>
-      </div>
-      <div class="field">
-        <label for="fastingBloodSugar">Nivel de glucosa en ayunas</label>
-        <p-dropdown id="fastingBloodSugar" formControlName="fastingBloodSugar" [options]="fastingBloodSugarOptions" optionLabel="text" placeholder="Seleccione"  required="true"/>
-      </div>
-      <div class="field">
-        <label for="restingElectrocardiographicResults">Resultados electrocardiográficos</label>
-        <p-dropdown id="restingElectrocardiographicResults" formControlName="restingElectrocardiographicResults" [options]="restingElectrocardiographicResultsOptions" optionLabel="text" placeholder="Seleccione"  required="true"/>
-      </div>
-      <div class="field">
-        <label for="maxHeartRate">Frecuencia cardiaca máxima</label>
-        <p-inputNumber inputId="maxHeartRate" formControlName="maxHeartRate" showButtons="true" required="true"/>
-      </div>
-      <div class="field">
-        <label for="exerciseInducedAngina">Angina inducida por ejercicio</label>
-        <p-dropdown id="exerciseInducedAngina" formControlName="exerciseInducedAngina" [options]="exerciseInducedAnginaOptions" optionLabel="text" placeholder="Seleccione"  required="true"/>
-      </div>
-      <div class="field">
-        <label for="oldpeak">Oldpeak</label>
-        <p-inputNumber inputId="oldpeak" formControlName="oldpeak" showButtons="true" required="true"/>
-      </div>
-      <div class="field">
-        <label for="STSegment">Segmento ST</label>
-        <p-inputNumber inputId="STSegment" formControlName="STSegment" showButtons="true" required="true"/>
-      </div>
-      <div class="field">
-        <label for="majorVessels">Vasos principales</label>
-        <p-inputNumber inputId="majorVessels" formControlName="majorVessels" showButtons="true" required="true"/>
-      </div>
-      <div class="field">
-        <label for="thal">Tipo de talasemia</label>
-        <p-dropdown id="thal" formControlName="thal" [options]="thalOptions" optionLabel="text" placeholder="Seleccione"  required="true"/>
-      </div>
-      <div class="flex align-items-center justify-content-end pt-2">
-        <button class="p-button submit-button" [disabled]="form.invalid" > Enviar </button>
-      </div>
-    </form>
+@if(!loading){
+  <div class="grid">
+    <div class="col-12">
+      <form [formGroup]="form">
+        <div class="field">
+          <label for="age">Edad</label>
+          <p-inputNumber
+            inputId="age"
+            formControlName="age"
+            showButtons="true"
+            required="true"/>
+        </div>
+        <div class="field">
+          <label for="sex">Sexo</label>
+          <p-dropdown
+            id="sex"
+            formControlName="sex"
+            [options]="sexOptions"
+            optionLabel="text"
+            placeholder="Seleccione"
+            required="true"
+            appendTo="body"/>
+        </div>
+        <div class="field">
+          <label for="chestPainType">Tipo de dolor de pecho</label>
+          <p-dropdown
+            id="chestPainType"
+            formControlName="chestPainType"
+            [options]="chestPainTypeOptions"
+            optionLabel="text"
+            placeholder="Seleccione"
+            required="true"
+            appendTo="body"/>
+        </div>
+        <div class="field">
+          <label for="restingBloodPressure">Presión arterial en reposo</label>
+          <p-inputNumber
+            inputId="restingBloodPressure"
+            formControlName="restingBloodPressure"
+            showButtons="true"
+            required="true"/>
+        </div>
+        <div class="field">
+          <label for="serumCholestoral">Colesterol total en sangre</label>
+          <p-inputNumber
+            inputId="serumCholestoral"
+            formControlName="serumCholestoral"
+            showButtons="true"
+            required="true"/>
+        </div>
+        <div class="field">
+          <label for="fastingBloodSugar">Nivel de glucosa en ayunas</label>
+          <p-dropdown
+            id="fastingBloodSugar"
+            formControlName="fastingBloodSugar"
+            [options]="fastingBloodSugarOptions"
+            optionLabel="text"
+            placeholder="Seleccione"
+            required="true"
+            appendTo="body"/>
+        </div>
+        <div class="field">
+          <label for="restingElectrocardiographicResults">Resultados electrocardiográficos</label>
+          <p-dropdown
+            id="restingElectrocardiographicResults"
+            formControlName="restingElectrocardiographicResults"
+            [options]="restingElectrocardiographicResultsOptions"
+            optionLabel="text"
+            placeholder="Seleccione"
+            required="true"
+            appendTo="body"/>
+        </div>
+        <div class="field">
+          <label for="maxHeartRate">Frecuencia cardiaca máxima</label>
+          <p-inputNumber
+            inputId="maxHeartRate"
+            formControlName="maxHeartRate"
+            showButtons="true"
+            required="true"/>
+        </div>
+        <div class="field">
+          <label for="exerciseInducedAngina">Angina inducida por ejercicio</label>
+          <p-dropdown
+            id="exerciseInducedAngina"
+            formControlName="exerciseInducedAngina"
+            [options]="exerciseInducedAnginaOptions"
+            optionLabel="text"
+            placeholder="Seleccione"
+            required="true"
+            appendTo="body"/>
+        </div>
+        <div class="field">
+          <label for="oldpeak">Oldpeak</label>
+          <p-inputNumber
+            inputId="oldpeak"
+            formControlName="oldpeak"
+            showButtons="true"
+            required="true"/>
+        </div>
+        <div class="field">
+          <label for="STSegment">Segmento ST</label>
+          <p-inputNumber
+            inputId="STSegment"
+            formControlName="STSegment"
+            showButtons="true"
+            required="true"/>
+        </div>
+        <div class="field">
+          <label for="majorVessels">Vasos principales</label>
+          <p-inputNumber
+            inputId="majorVessels"
+            formControlName="majorVessels"
+            showButtons="true"
+            required="true"/>
+        </div>
+        <div class="field">
+          <label for="thal">Tipo de talasemia</label>
+          <p-dropdown
+            id="thal"
+            formControlName="thal"
+            [options]="thalOptions"
+            optionLabel="text"
+            placeholder="Seleccione"
+            required="true"
+            appendTo="body"/>
+        </div>
+        <div class="flex align-items-center justify-content-end pt-2">
+          <button
+            class="p-button submit-button"
+            [disabled]="form.invalid"
+            (click)="onSubmit()">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
+} @else if (loading) {
+  <div class="grid flex align-content-center justify-content-center h-full">
+      <p-progressSpinner ariaLabel="loading" />
+  </div>
+}
+
+
+
