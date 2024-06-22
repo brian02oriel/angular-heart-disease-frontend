@@ -1,0 +1,7 @@
+@import "../../../assets/theme/theme_variables";
+.res-banner {
+  color: map-get($palette-color, complementary);
+  .res-text {
+    font-size: 10em;
+  }
+}

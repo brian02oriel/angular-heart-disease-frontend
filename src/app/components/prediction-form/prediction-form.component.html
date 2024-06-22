@@ -1,4 +1,4 @@
-@if(!loading){
+@if(!loading && res === undefined){
   <div class="grid">
     <div class="col-12">
       <form [formGroup]="form">
@@ -6,9 +6,11 @@
           <label for="age">Edad</label>
           <p-inputNumber
             inputId="age"
+            placeholder="10 - 120"
             formControlName="age"
             showButtons="true"
             required="true"/>
+            <small class="error"> {{ getErrorMessage(form.controls.age.errors) }}</small>
         </div>
         <div class="field">
           <label for="sex">Sexo</label>
@@ -20,6 +22,7 @@
             placeholder="Seleccione"
             required="true"
             appendTo="body"/>
+            <small class="error"> {{ getErrorMessage(form.controls.sex.errors) }}</small>
         </div>
         <div class="field">
           <label for="chestPainType">Tipo de dolor de pecho</label>
@@ -31,22 +34,27 @@
             placeholder="Seleccione"
             required="true"
             appendTo="body"/>
+            <small class="error"> {{ getErrorMessage(form.controls.chestPainType.errors) }}</small>
         </div>
         <div class="field">
           <label for="restingBloodPressure">Presión arterial en reposo</label>
           <p-inputNumber
             inputId="restingBloodPressure"
+            placeholder="120-190"
             formControlName="restingBloodPressure"
             showButtons="true"
             required="true"/>
+            <small class="error"> {{ getErrorMessage(form.controls.restingBloodPressure.errors) }}</small>
         </div>
         <div class="field">
           <label for="serumCholestoral">Colesterol total en sangre</label>
           <p-inputNumber
             inputId="serumCholestoral"
+            placeholder="140-260"
             formControlName="serumCholestoral"
             showButtons="true"
             required="true"/>
+            <small class="error"> {{ getErrorMessage(form.controls.serumCholestoral.errors) }}</small>
         </div>
         <div class="field">
           <label for="fastingBloodSugar">Nivel de glucosa en ayunas</label>
@@ -58,6 +66,7 @@
             placeholder="Seleccione"
             required="true"
             appendTo="body"/>
+            <small class="error"> {{ getErrorMessage(form.controls.fastingBloodSugar.errors) }}</small>
         </div>
         <div class="field">
           <label for="restingElectrocardiographicResults">Resultados electrocardiográficos</label>
@@ -69,14 +78,17 @@
             placeholder="Seleccione"
             required="true"
             appendTo="body"/>
+            <small class="error"> {{ getErrorMessage(form.controls.restingElectrocardiographicResults.errors) }}</small>
         </div>
         <div class="field">
           <label for="maxHeartRate">Frecuencia cardiaca máxima</label>
           <p-inputNumber
             inputId="maxHeartRate"
+            placeholder="120 - 220"
             formControlName="maxHeartRate"
             showButtons="true"
             required="true"/>
+            <small class="error"> {{ getErrorMessage(form.controls.maxHeartRate.errors) }}</small>
         </div>
         <div class="field">
           <label for="exerciseInducedAngina">Angina inducida por ejercicio</label>
@@ -88,30 +100,37 @@
             placeholder="Seleccione"
             required="true"
             appendTo="body"/>
+            <small class="error"> {{ getErrorMessage(form.controls.exerciseInducedAngina.errors) }}</small>
         </div>
         <div class="field">
           <label for="oldpeak">Oldpeak</label>
           <p-inputNumber
             inputId="oldpeak"
+            placeholder="1 - 4"
             formControlName="oldpeak"
             showButtons="true"
             required="true"/>
+            <small class="error"> {{ getErrorMessage(form.controls.oldpeak.errors) }}</small>
         </div>
         <div class="field">
           <label for="STSegment">Segmento ST</label>
           <p-inputNumber
             inputId="STSegment"
+            placeholder="0 - 3"
             formControlName="STSegment"
             showButtons="true"
             required="true"/>
+            <small class="error"> {{ getErrorMessage(form.controls.STSegment.errors) }}</small>
         </div>
         <div class="field">
           <label for="majorVessels">Vasos principales</label>
           <p-inputNumber
             inputId="majorVessels"
+            placeholder="0 - 3"
             formControlName="majorVessels"
             showButtons="true"
             required="true"/>
+            <small class="error"> {{ getErrorMessage(form.controls.majorVessels.errors) }}</small>
         </div>
         <div class="field">
           <label for="thal">Tipo de talasemia</label>
@@ -123,8 +142,14 @@
             placeholder="Seleccione"
             required="true"
             appendTo="body"/>
+            <small class="error"> {{ getErrorMessage(form.controls.thal.errors) }}</small>
         </div>
         <div class="flex align-items-center justify-content-end pt-2">
+          <button
+            class="p-button inv-button mr-2"
+            (click)="onFill()">
+            Rellenar
+          </button>
           <button
             class="p-button submit-button"
             [disabled]="form.invalid"
@@ -138,6 +163,22 @@
 } @else if (loading) {
   <div class="grid flex align-content-center justify-content-center h-full">
       <p-progressSpinner ariaLabel="loading" />
+  </div>
+} @else if (!loading && res !== undefined){
+  <div class="res-banner flex flex-column h-full">
+    <div class="flex flex-column align-content-start justify-content-start h-full">
+      <h2> Tiene una probabilidad de </h2>
+      <h1 class="res-text"> {{ res }}%</h1>
+      <h2> de estar sufriendo una enfermedad cardiaca </h2>
+      <small class="pt-2"> Recuerde consultar a su médico </small>
+    </div>
+    <div class="flex align-items-end justify-content-end mb-auto">
+        <button
+        class="p-button submit-button"
+        (click)="onRepeat()">
+          Repetir
+        </button>
+    </div>
   </div>
 }
 
